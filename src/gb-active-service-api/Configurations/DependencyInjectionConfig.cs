@@ -1,4 +1,6 @@
 ﻿using gb_active_service_api.Data.Contexts;
+using gb_active_service_api.Data.Repositories;
+using gb_active_service_api.Interfaces.Repositories;
 
 namespace gb_active_service_api.Configurations
 {
@@ -11,8 +13,10 @@ namespace gb_active_service_api.Configurations
 
             //services.AddScoped<ITorneioService, TorneioService>();
             
-            //services.AddScoped<ITorneioRepository, TorneioRepository>();
-            
+            services.AddScoped<IActiveRepository, ActiveRepository>();
+            services.AddScoped<IDependencyRepository, DependencyRepository>();
+            services.AddScoped<IResponsibleRepository, ResponsibleRepository>();
+
             return services;
         }
     }

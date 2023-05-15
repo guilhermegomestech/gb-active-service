@@ -1,6 +1,16 @@
+using gb_active_service_api.Configurations;
+using gb_active_service_api.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ActivesDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("GbActiveServiceDb"));
+});
+
+builder.Services.ResolveDependencies();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

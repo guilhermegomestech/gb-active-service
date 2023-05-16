@@ -1,6 +1,8 @@
 ﻿using gb_active_service_api.Data.Contexts;
 using gb_active_service_api.Data.Repositories;
+using gb_active_service_api.Interfaces.Notifications;
 using gb_active_service_api.Interfaces.Repositories;
+using gb_active_service_api.Notifications;
 
 namespace gb_active_service_api.Configurations
 {
@@ -9,7 +11,7 @@ namespace gb_active_service_api.Configurations
         public static IServiceCollection ResolveDependencies(this IServiceCollection services)
         {
             services.AddScoped<ActivesDbContext>();
-            //services.AddScoped<INotificador, Notificador>();
+            services.AddScoped<INotificator, Notificator>();
 
             //services.AddScoped<ITorneioService, TorneioService>();
             

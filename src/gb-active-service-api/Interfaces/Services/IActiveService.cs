@@ -7,11 +7,11 @@ namespace gb_active_service_api.Interfaces.Services
         Task<List<Active>> GetAll();
         Task<Active> GetById(Guid id);
         
-        Task Create(Active entity);
+        Task Create(Active active);
 
-        Task CreateMany(List<Active> entities);
+        Task CreateMany(List<Active> actives);
 
-        Task Update(Active entity);
+        Task Update(Active active);
 
         Task Delete(Guid id);
     }

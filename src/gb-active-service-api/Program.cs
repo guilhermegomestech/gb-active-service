@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<ActivesDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("GbActiveServiceDb"));
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("GbActiveServiceDb"));
+    options.UseSqlServer("Data Source=DESENVLINUX;Initial Catalog=GB_ACTIVE_SERVICE;User ID=sa;Password=$antos1612;TrustServerCertificate=true;");
 });
 
 builder.Services.ResolveDependencies();

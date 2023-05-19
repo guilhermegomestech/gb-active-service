@@ -15,7 +15,7 @@ namespace gb_active_service_api.Migrations
                 name: "Dependencies",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Description = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
                     Address = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false)
                 },
@@ -28,7 +28,7 @@ namespace gb_active_service_api.Migrations
                 name: "Responsibles",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
                     Phone = table.Column<string>(type: "VARCHAR(20)", maxLength: 20, nullable: false),
                     Email = table.Column<string>(type: "VARCHAR(100)", maxLength: 100, nullable: false)
@@ -42,9 +42,9 @@ namespace gb_active_service_api.Migrations
                 name: "Actives",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ResponsibleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DependencyId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    ResponsibleId = table.Column<Guid>(type: "uuid", nullable: false),
+                    DependencyId = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
                     Brand = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false)
                 },

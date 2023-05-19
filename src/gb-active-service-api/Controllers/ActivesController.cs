@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace gb_active_service_api.Controllers
 {
-    [Route("api/actives")]
+    [Route("api/v1/actives")]
     [ApiController]
     public class ActivesController : MainController
     {

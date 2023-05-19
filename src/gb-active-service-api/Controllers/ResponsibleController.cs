@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace gb_responsible_service_api.Controllers
 {
-    [Route("api/responsibles")]
+    [Route("api/v1/responsibles")]
     [ApiController]
     public class ResponsiblesController : MainController
     {

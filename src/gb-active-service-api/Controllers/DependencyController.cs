@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace gb_dependency_service_api.Controllers
 {
-    [Route("api/dependencies")]
+    [Route("api/v1/dependencies")]
     [ApiController]
     public class DependenciesController : MainController
     {

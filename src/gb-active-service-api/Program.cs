@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ActivesDbContext>(options =>
 {
     //options.UseSqlServer(builder.Configuration.GetConnectionString("GbActiveServiceDb"));
-    options.UseSqlServer("Data Source=DESENVLINUX;Initial Catalog=GB_ACTIVE_SERVICE;User ID=sa;Password=$antos1612;TrustServerCertificate=true;");
+    options.UseSqlServer("Data Source=192.168.122.129;Initial Catalog=GB_ACTIVE_SERVICE;User ID=sa;Password=$antos1612;TrustServerCertificate=true;");
 });
 
 builder.Services.ResolveDependencies();
